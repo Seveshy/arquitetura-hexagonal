@@ -25,7 +25,7 @@ func TestProduct_Enable(t *testing.T) {
 func TestProduct_Disable(t *testing.T) {
 	product := application.Product{}
 	product.Name = "Hello"
-	product.Status = application.DISABLED
+	product.Status = application.ENABLED
 	product.Price = 0
 
 	err := product.Disable()
