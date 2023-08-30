@@ -68,11 +68,11 @@ func (p *Product) IsValid() (bool, error) {
 	}
 
 	if p.Status != ENABLED && p.Status != DISABLED {
-		return false, errors.New("the status must be enabled pr disabled")
+		return false, errors.New("the status must or enabled pr disabled")
 	}
 
 	if p.Price < 0 {
-		return false, errors.New("the status must be greater or equal zero")
+		return false, errors.New("the price must be greater or equal zero")
 	}
 
 	_, err := govalidator.ValidateStruct(p)
